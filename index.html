@@ -68,7 +68,7 @@
       gap: 30px;
       margin-left: auto;
       margin-right: 20px;
-      direction: ltr;
+      flex-direction: row-reverse; 
     }
 
     .nav-menu a {
@@ -863,7 +863,7 @@
       max-width: none;
     }
 
-    /* متن درباره من در موبایل - کاملاً بازنویسی شده */
+    /* متن درباره من در موبایل  */
     .design-text-content {
       font-size: min(16px, 2vw);
       padding: min(20px, 2.5vw);
@@ -1654,10 +1654,10 @@
       </div>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#home">Home</a>
       </nav>
 
       <button class="nav-icon" id="navToggle" aria-label="Menu" aria-expanded="false">
@@ -1690,24 +1690,25 @@
             <span style="font-weight: 700; color: #0f2543;">توسعه‌دهنده فول‌استک پایتون | جنگو-جاوا</span>
             <br><br>
             دارای تجربه کاربردی در توسعه و استقرار پروژه‌های کامل وب شامل سامانه فروشگاهی (Django)، وب‌سایت موسیقی
-            (Next.js) و اپلیکیشن مدیریت کتابخانه.
+            (Next.js) و اپلیکیشن مدیریت کتابخانه ویندوز.
             <br><br>
             یادگیرنده‌ای سریع و مستقل، متعهد به تولید کد با کیفیت و همکاری مؤثر در تیم‌ها.
           </p>
           <a href="assets/resume.pdf" download style="
-     display: inline-block;
-     margin-top: 25px;
-     background: #0f2543;
-     color: #f6c21b;
-     padding: 14px 35px;
-     border-radius: 6px;
-     font-weight: 700;
-     font-size: 16px;
-     text-decoration: none;
-     font-family: 'Vazirmatn', 'Poppins', sans-serif;
-     transition: all 0.3s ease;
-     border: 2px solid #0f2543;
-   " onmouseover="this.style.background='#f6c21b'; this.style.color='#0f2543';"
+            display: inline-block;
+            margin-top: 20px;
+            background: #0f2543;
+            color: #f6c21b;
+            padding: 10px 28px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            font-family: 'Vazirmatn', 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            border: 2px solid #0f2543;
+            float: right;
+          " onmouseover="this.style.background='#f6c21b'; this.style.color='#0f2543';"
             onmouseout="this.style.background='#0f2543'; this.style.color='#f6c21b';">
             <i class="fas fa-download"></i> دانلود رزومه
           </a>
@@ -1827,13 +1828,20 @@
       <div class="contact-right">
         <h3 class="contact-title">CONTACT US</h3>
         <div class="social-icons">
-          <a href="https://wa.me/989052324351" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
           <a href="https://t.me/09964554033" aria-label="Telegram" target="_blank"><i
               class="fab fa-telegram-plane"></i></a>
           <a href="https://instagram.com/smartdevstudio" aria-label="Instagram" target="_blank"><i
               class="fab fa-instagram"></i></a>
           <a href="https://github.com/mohebi-dev" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
           <a href="mailto:mohebi.dev01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <!-- شماره تلفن جداگانه با قابلیت کپی -->
+        <div class="contact-phone" onclick="copyPhoneNumber()" style="cursor: pointer;">
+          <i class="fas fa-phone-alt"></i>
+          <span id="phoneNumber">۰۹۹۶۴۵۵۴۰۳۳</span>
+          <span style="font-size: 12px; opacity: 0.7; margin-right: 8px;">(کلیک کنید تا کپی شود)</span>
         </div>
         <p
           style="text-align: right; direction: rtl; font-family: 'Vazirmatn'; margin-top: 20px; color: var(--bg-dark);">
@@ -2033,7 +2041,7 @@
 
     // تابع باز کردن مودال
     function openProjectModal(title) {
-      const project = window.projectsData[title];  // تغییر اینجا: اضافه کردن window.
+      const project = window.projectsData[title];
 
       if (!project) {
         console.error('پروژه پیدا نشد:', title);
@@ -2148,7 +2156,6 @@
         <div class="modal-slider">
           <div class="swiper">
             <div class="swiper-wrapper">
-              <!-- اسلایدها اینجا به صورت داینامیک ساخته می‌شوند -->
             </div>
             <!-- دکمه‌های ناوبری -->
             <div class="swiper-button-next"></div>
@@ -2177,6 +2184,24 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    function copyPhoneNumber() {
+      const phone = document.getElementById('phoneNumber').textContent;
+      navigator.clipboard.writeText(phone).then(() => {
+        alert('شماره تماس کپی شد!');
+      }).catch(() => {
+        // روش قدیمی برای مرورگرهای پشتیبان
+        const textArea = document.createElement('textarea');
+        textArea.value = phone;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert('شماره تماس کپی شد!');
+      });
+    }
+  </script>
 </body>
 
 </html>
