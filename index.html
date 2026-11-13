@@ -68,7 +68,7 @@
       gap: 30px;
       margin-left: auto;
       margin-right: 20px;
-     
+
     }
 
     .nav-menu a {
@@ -242,18 +242,20 @@
     }
 
     .design-text-content {
-      line-height: 1.8;
+      line-height: 1.9;
+      font-size: 17px;
       color: #cfd6e5;
       position: relative;
       text-align: right;
       direction: rtl;
       font-family: 'Vazirmatn', 'Poppins', sans-serif;
-      padding: 20px;
+      padding: 24px;
       background: rgba(23, 52, 87, 0.2);
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.05);
       overflow: hidden;
     }
+
 
     /* حالت عادی (۳ خط اول) */
     .design-text-content:not(.expanded) {
@@ -345,7 +347,7 @@
     .section-title {
       color: var(--yellow);
       margin: 0 0 15px 0;
-      font-size: 14px;
+      font-size: 20px;
       font-weight: 700;
       border-right: 3px solid var(--yellow);
       padding-right: 12px;
@@ -393,6 +395,27 @@
       transform: translateY(-1px);
     }
 
+    /* About Me - Typography */
+    #bioText .bio-short p {
+      font-size: 20px;
+      line-height: 2;
+      margin-bottom: 14px;
+    }
+
+    #bioText .skills-list li {
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    #bioText .section-title {
+      font-size: 23px;
+    }
+
+    #bioText .experience-text {
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
     /* Gallery Section */
     .gallery-section {
       background: var(--bg-dark);
@@ -414,6 +437,11 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       margin-bottom: 50px;
+    }
+
+    /* وسط‌چین شدن پروژه چهارم در ردیف دوم */
+    .gallery-item:nth-child(4) {
+      grid-column: 2;
     }
 
     .gallery-item {
@@ -1671,7 +1699,7 @@
     <div class="container banner-inner">
       <div class="banner-left">
         <div class="portrait-box">
-          <img src="images/banner.jpg" alt="portfolio">
+          <img src="images/banner.jpg" alt="فاطمه محبی - توسعه‌دهنده فول‌استک">
         </div>
         <div class="overlay-text">portfolio</div>
       </div>
@@ -1679,36 +1707,40 @@
       <div class="banner-right">
         <div class="banner-text">
           <p style="
-            text-align: right;
-            direction: rtl;
-            line-height: 1.9;
-            font-family: 'Vazirmatn', 'Poppins', sans-serif;
-            font-size: 17px;
-            font-weight: 400;
-            padding: 10px 0;
-          ">
-            <span style="font-weight: 700; color: #0f2543;">توسعه‌دهنده فول‌استک پایتون | جنگو-جاوا</span>
+          text-align: right;
+          direction: rtl;
+          line-height: 1.9;
+          font-family: 'Vazirmatn', 'Poppins', sans-serif;
+          font-size: 17px;
+          font-weight: 400;
+          padding: 10px 0;
+        ">
+            <span style="font-weight: 700; color: #0f2543;">
+              فاطمه محبی | توسعه‌دهنده فول‌استک (Python / Next.js)
+            </span>
             <br><br>
-            دارای تجربه کاربردی در توسعه و استقرار پروژه‌های کامل وب شامل سامانه فروشگاهی (Django)، وب‌سایت موسیقی
-            (Next.js) و اپلیکیشن مدیریت کتابخانه ویندوز.
+            توسعه‌دهنده نرم‌افزار با تمرکز بر طراحی و پیاده‌سازی وب‌اپلیکیشن‌های مدرن، توسعه بک‌اند با Python و Django و
+            ساخت رابط‌های کاربری پویا با React و Next.js.
             <br><br>
-            یادگیرنده‌ای سریع و مستقل، متعهد به تولید کد با کیفیت و همکاری مؤثر در تیم‌ها.
+            دارای تجربه عملی در توسعه وب‌سایت‌های شرکتی و فروشگاهی، طراحی API، کار با پایگاه‌های داده و پیاده‌سازی
+            نرم‌افزارهای دسکتاپ؛ با تأکید بر معماری اصولی، کدنویسی تمیز و راهکارهای متناسب با نیاز کسب‌وکارها.
           </p>
+
           <a href="assets/resume.pdf" download style="
-            display: inline-block;
-            margin-top: 20px;
-            background: #0f2543;
-            color: #f6c21b;
-            padding: 10px 28px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            font-family: 'Vazirmatn', 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-            border: 2px solid #0f2543;
-            float: right;
-          " onmouseover="this.style.background='#f6c21b'; this.style.color='#0f2543';"
+          display: inline-block;
+          margin-top: 20px;
+          background: #0f2543;
+          color: #f6c21b;
+          padding: 10px 28px;
+          border-radius: 6px;
+          font-weight: 700;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: 'Vazirmatn', 'Poppins', sans-serif;
+          transition: all 0.3s ease;
+          border: 2px solid #0f2543;
+          float: right;
+        " onmouseover="this.style.background='#f6c21b'; this.style.color='#0f2543';"
             onmouseout="this.style.background='#0f2543'; this.style.color='#f6c21b';">
             <i class="fas fa-download"></i> دانلود رزومه
           </a>
@@ -1717,74 +1749,124 @@
     </div>
   </section>
 
-  <!-- Design Section -->
+  <!-- About & Skills Section -->
   <section id="about" class="design-section">
     <div class="container design-inner animate-fadeInUp">
-      <h6 class="design-title">مهارت‌های تخصصی</h6>
-      <p class="design-subtitle">توسعه‌دهنده فول‌استک | Python, Django & Java</p>
+
+      <h6 class="design-title">درباره من</h6>
+      <p class="design-subtitle">
+        Full-Stack Developer | Python, Django & Next.js
+      </p>
 
       <div class="design-text-container">
         <div class="design-text-content" id="bioText">
-          <!-- پاراگراف اول (فقط این ۳ خط بشه) -->
+
+          <!-- معرفی -->
           <div class="bio-short"
             style="text-align: right; direction: rtl; font-family: 'Vazirmatn', 'Poppins', sans-serif;">
-            توسعه‌دهنده فول‌استک پایتون | متخصص جنگو
-            <br><br>
-            دارای تجربه کاربردی در توسعه و استقرار پروژه‌های کامل وب شامل سامانه فروشگاهی (Django)، وب‌سایت موسیقی
-            (Next.js) و اپلیکیشن مدیریت کتابخانه. توانمند در مدیریت چرخه کامل توسعه نرم‌افزار از طراحی تا پیاده‌سازی.
-            <br><br>
-            یادگیرنده‌ای سریع و مستقل، متعهد به تولید کد با کیفیت و همکاری مؤثر در تیم‌ها. جویای موقعیت کارآموزی یا
-            جونیور جهت آغاز همکاری حرفه‌ای و ایجاد ارزش افزوده در محیطی پویا.
+
+            <p>
+              من فاطمه محبی، توسعه‌دهنده فول‌استک با تمرکز بر Python و فناوری‌های مدرن توسعه وب هستم. در زمینه تحلیل
+              نیازمندی‌ها، طراحی ساختار نرم‌افزار و توسعه وب‌اپلیکیشن‌های کاربردی فعالیت می‌کنم و به پیاده‌سازی
+              راهکارهایی اهمیت می‌دهم که علاوه بر عملکرد مناسب، قابل نگهداری و توسعه باشند.
+            </p>
+
+            <br>
+
+            <p>
+              در بخش بک‌اند با Python، Django و Django REST Framework و در بخش فرانت‌اند با JavaScript، TypeScript،
+              React و Next.js کار می‌کنم. همچنین تجربه کار با پایگاه‌های داده رابطه‌ای از جمله PostgreSQL، SQL Server و
+              SQLite و ابزارهای مدیریت داده مانند SQLAlchemy و Prisma را دارم.
+            </p>
+
+            <br>
+
+            <p>
+              تجربه عملی من شامل توسعه وب‌سایت‌های شرکتی و فروشگاهی، طراحی APIهای RESTful، سیستم‌های مدیریت محتوا،
+              کاتالوگ محصولات، سبد خرید و نرم‌افزارهای دسکتاپ است. در پروژه‌های مختلف با معماری سه‌لایه، ساختارهای
+              ماژولار و معماری Monorepo کار کرده‌ام.
+            </p>
+
+            <br>
+
+            <p>
+              در فرآیند توسعه نرم‌افزار، به تفکیک مسئولیت‌ها، طراحی ساختار مناسب، خوانایی و نگهداری‌پذیری کد، تست و
+              اشکال‌زدایی اهمیت می‌دهم. همچنین از Git و GitHub برای کنترل نسخه و مدیریت تغییرات پروژه استفاده می‌کنم.
+              هدفم ارائه راهکارهای نرم‌افزاری قابل اعتماد، توسعه‌پذیر و متناسب با نیاز واقعی کسب‌وکارهاست.
+            </p>
+
           </div>
 
-          <!-- بخش مهارت‌ها (در حالت عادی مخفی) -->
+          <!-- Technical Skills -->
           <div class="bio-extra skills-section"
             style="text-align: right; direction: rtl; font-family: 'Vazirmatn', 'Poppins', sans-serif;">
-            <h3 class="section-title" style="border-right: 3px solid #f6c21b; padding-right: 12px;">مهارت‌های تخصصی</h3>
+
+            <h3 class="section-title" style="border-right: 3px solid #f6c21b; padding-right: 12px;">
+              مهارت‌های تخصصی
+            </h3>
+
             <ul class="skills-list" style="padding-right: 20px; list-style: none;">
-              <li>توسعه Back-End و API: Django، Django REST</li>
-              <li>معماری سه‌لایه (Three-tier)</li>
-              <li>SQLAlchemy، پایگاه‌داده SQL</li>
-              <li>توسعه Front-End: Next.js، React، TypeScript</li>
-              <li>Tailwind CSS، JavaScript/TypeScript</li>
-              <li>طراحی و مدیریت پایگاه داده با SQLite، SQL Server، Prisma</li>
-              <li>ابزارها: Git، GitHub، Debugging، حل مسئله فنی</li>
-              <li>مهارت‌های کلیدی: تفکر منطقی، توسعه Full-Stack، کار تیمی</li>
+              <li>زبان‌های برنامه‌نویسی: Python، JavaScript، TypeScript، SQL</li>
+              <li>توسعه Back-End: Django، Django REST Framework</li>
+              <li>توسعه Front-End: React، Next.js، HTML5، CSS3</li>
+              <li>طراحی رابط کاربری: Tailwind CSS، Bootstrap</li>
+              <li>پایگاه داده: PostgreSQL، SQL Server، SQLite</li>
+              <li>ابزارهای مدیریت داده: SQLAlchemy، Prisma</li>
+              <li>معماری نرم‌افزار: معماری سه‌لایه، ساختار ماژولار و Monorepo</li>
+              <li>کیفیت کد: Clean Code، تست، Debugging و TypeScript Strict Mode</li>
+              <li>ابزارهای توسعه: Git، GitHub، Node.js، ESLint و Prettier</li>
             </ul>
+
           </div>
 
-          <!-- بخش دوره‌ها (در حالت عادی مخفی) -->
+          <!-- Courses -->
           <div class="bio-extra experience-section"
             style="text-align: right; direction: rtl; font-family: 'Vazirmatn', 'Poppins', sans-serif;">
-            <h3 class="section-title" style="border-right: 3px solid #f6c21b; padding-right: 12px;">دوره‌های تخصصی</h3>
+
+            <h3 class="section-title" style="border-right: 3px solid #f6c21b; padding-right: 12px;">
+              دوره‌های تخصصی
+            </h3>
+
             <div class="experience-text">
-              <p><strong>دوره‌های تخصصی توسعه نرم‌افزار</strong></p>
-              <p>مؤسسه: آکادمی استاد مدحج | ۱۴۰۴</p>
-              <p>پایتون پیشرفته | توسعه وب با Django و Java | هوش مصنوعی</p>
+              <p><strong>دوره جامع توسعه نرم‌افزار</strong></p>
+              <p>مؤسسه: آکادمی استاد مدحج | سال ۱۴۰۴</p>
+              <p>پایتون پیشرفته | توسعه وب با Django | JavaScript | هوش مصنوعی</p>
             </div>
+
           </div>
+
         </div>
 
         <button class="toggle-btn" id="toggleBtn">مشاهده بیشتر</button>
       </div>
+    </div>
   </section>
-
   <!-- Gallery Section -->
   <section id="projects" class="gallery-section">
     <div class="container">
       <h2 class="gallery-title">نمونه‌کارها</h2>
 
       <div class="gallery-grid">
-        <!-- پروژه ۱: سیستم مدیریت کتابخانه -->
-        <div class="gallery-item" onclick="openProjectModal('سیستم مدیریت کتابخانه')">
-          <img src="images/projects/library/Library Management System.png" alt="سیستم مدیریت کتابخانه">
+
+        <!-- پروژه ۱: ارس شیمی ایرانیان -->
+        <div class="gallery-item" onclick="openProjectModal('ارس شیمی ایرانیان')">
+          <img src="images/projects/aras-shimi/1.png" alt="ارس شیمی ایرانیان">
           <div class="gallery-overlay">
-            <h3>سیستم مدیریت کتابخانه</h3>
-            <p>Python · CustomTkinter · SQLAlchemy</p>
+            <h3>ارس شیمی ایرانیان</h3>
+            <p>Django · Next.js · PostgreSQL · TypeScript</p>
           </div>
         </div>
 
-        <!-- پروژه ۲: وبسایت موسیقی -->
+        <!-- پروژه ۲: فروشگاه موسیقی -->
+        <div class="gallery-item" onclick="openProjectModal('فروشگاه موسیقی')">
+          <img src="images/projects/music-shop/Full-Stack Music Shop.png" alt="فروشگاه موسیقی">
+          <div class="gallery-overlay">
+            <h3>فروشگاه موسیقی</h3>
+            <p>Django · Python · Bootstrap</p>
+          </div>
+        </div>
+
+        <!-- پروژه ۳: وبسایت موسیقی -->
         <div class="gallery-item" onclick="openProjectModal('وبسایت موسیقی')">
           <img src="images/projects/music-website/Modern Music Platform.png" alt="وبسایت موسیقی">
           <div class="gallery-overlay">
@@ -1793,25 +1875,26 @@
           </div>
         </div>
 
-        <!-- پروژه ۳: فروشگاه موسیقی -->
-        <div class="gallery-item" onclick="openProjectModal('فروشگاه موسیقی')">
-          <img src="images/projects/music-shop/Full-Stack Music Shop.png" فروشگاه موسیقی">
+        <!-- پروژه ۴: سیستم مدیریت کتابخانه -->
+        <div class="gallery-item" onclick="openProjectModal('سیستم مدیریت کتابخانه')">
+          <img src="images/projects/library/Library Management System.png" alt="سیستم مدیریت کتابخانه">
           <div class="gallery-overlay">
-            <h3>فروشگاه موسیقی</h3>
-            <p>Django · Python · Bootstrap</p>
+            <h3>سیستم مدیریت کتابخانه</h3>
+            <p>Python · CustomTkinter · SQLAlchemy</p>
           </div>
         </div>
+
       </div>
 
+      <!-- Gallery Footer -->
       <div class="gallery-footer">
         <a href="#!" class="toggle-btn" id="showProjectsBtn">
           مشاهده پروژه‌ها
         </a>
-        <p class="gallery-caption">۳ پروژه منتخب از نمونه‌کارها</p>
+        <p class="gallery-caption">۴ پروژه منتخب از نمونه‌کارها</p>
       </div>
-    </div>
-    </div>
 
+    </div>
   </section>
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
@@ -1925,12 +2008,41 @@
           description: 'یک فروشگاه اینترنتی کامل برای لوازم موسیقی. شامل مدیریت کاربران، محصولات، سبد خرید، پرداخت و پنل مدیریت. توسعه بک‌اند با Django و فرانت‌اند واکنش‌گرا با Bootstrap.',
           github: 'https://github.com/mohebi-dev/Music-Shop-Django.git',
           demo: 'https://aparat.com/v/pxxrhc6'
-        }
+        },
+
+        'ارس شیمی ایرانیان': {
+          title: 'ارس شیمی ایرانیان',
+          description: 'وب‌سایت شرکتی و کاتالوگ محصولات شیمیایی با طراحی چندزبانه، مدیریت محتوا و محصولات، سبد خرید و زیرساخت اتصال به درگاه پرداخت. توسعه بک‌اند با Django و Django REST Framework و فرانت‌اند با Next.js و TypeScript.',
+          images: [
+            'images/projects/aras-shimi/2.png',
+            'images/projects/aras-shimi/3.png',
+            'images/projects/aras-shimi/4.png',
+            'images/projects/aras-shimi/5.png',
+            'images/projects/aras-shimi/6.png',
+            'images/projects/aras-shimi/7.png',
+            'images/projects/aras-shimi/8.png',
+            'images/projects/aras-shimi/9.png',
+            'images/projects/aras-shimi/10.png',
+            'images/projects/aras-shimi/11.png',
+            'images/projects/aras-shimi/12.png',
+            'images/projects/aras-shimi/13.png',
+            'images/projects/aras-shimi/14.png',
+            'images/projects/aras-shimi/15.png',
+            'images/projects/aras-shimi/16.png',
+            'images/projects/aras-shimi/17.png',
+            'images/projects/aras-shimi/18.png'
+          ],
+          tech: 'Python · Django · DRF · PostgreSQL · Next.js · React · TypeScript',
+          demo: 'https://aparat.com/v/pdi648q'
+        },
+
+
+
       };
 
-      Object.keys(projectsData).forEach(key => {
-        if (projectsData[key].images && projectsData[key].images.length > 0) {
-          projectsData[key].image = projectsData[key].images[0];
+      Object.keys(window.projectsData).forEach(key => {
+        if (window.projectsData[key].images?.length > 0) {
+          window.projectsData[key].image = window.projectsData[key].images[0];
         }
       });
 
@@ -2035,7 +2147,6 @@
         window.scrollTo(0, 0);
       }, 100);
     }
-
     // ==================== SWIPER LOGIC ====================
     let swiperInstance = null;
 
@@ -2048,60 +2159,84 @@
         return;
       }
 
+      // حذف نمونه قبلی Swiper
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
+      }
+
       // پر کردن اطلاعات
       document.getElementById('modalTitle').textContent = title;
       document.getElementById('modalTech').textContent = project.tech;
       document.getElementById('modalDescription').textContent = project.description;
-      document.getElementById('githubLink').href = project.github;
-      document.getElementById('demoLink').href = project.demo;
 
-      // ساختن اسلایدها
+      // نمایش یا مخفی کردن لینک GitHub
+      const githubLink = document.getElementById('githubLink');
+
+      if (project.github) {
+        githubLink.href = project.github;
+        githubLink.style.display = 'flex';
+      } else {
+        githubLink.style.display = 'none';
+      }
+
+      // لینک دمو
+      const demoLink = document.getElementById('demoLink');
+
+      if (project.demo) {
+        demoLink.href = project.demo;
+        demoLink.style.display = 'flex';
+      } else {
+        demoLink.style.display = 'none';
+      }
+
+      // ساخت اسلایدها
       const swiperWrapper = document.querySelector('.swiper-wrapper');
       swiperWrapper.innerHTML = '';
 
       project.images.forEach((imageSrc, index) => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
-        slide.innerHTML = `<img src="${imageSrc}" alt="تصویر ${index + 1} پروژه ${title}" loading="lazy">`;
+
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        img.alt = `تصویر ${index + 1} پروژه ${title}`;
+        img.loading = 'lazy';
+
+        slide.appendChild(img);
         swiperWrapper.appendChild(slide);
       });
-
-      // مقداردهی اولیه یا آپدیت Swiper
-      if (!swiperInstance) {
-        swiperInstance = new Swiper('.swiper', {
-          direction: 'horizontal',
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-          slidesPerView: 1,
-          spaceBetween: 0,
-          effect: 'slide',
-          speed: 500,
-        });
-      } else {
-        swiperInstance.update();
-        swiperInstance.slideTo(0, 0);
-      }
 
       // نمایش مودال
       const modal = document.getElementById('projectModal');
       modal.style.display = 'block';
       document.body.style.overflow = 'hidden';
 
-      // شروع autoplay
-      if (swiperInstance.autoplay) {
-        swiperInstance.autoplay.start();
-      }
+      // ساخت نمونه جدید Swiper
+      swiperInstance = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        speed: 500,
+      });
     }
 
     // تابع بستن مودال
