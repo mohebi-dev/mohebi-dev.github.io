@@ -142,51 +142,51 @@
       }
     }
 
-    /* Hero Banner */
+    /* ==================== HERO BANNER ==================== */
+
     .hero-banner {
       background: var(--yellow);
       padding: 60px 0;
       position: relative;
-      overflow: visible;
     }
 
     .banner-inner {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.9fr 1.1fr;
       gap: 40px;
       align-items: center;
     }
 
     .banner-left {
       position: relative;
+      min-width: 0;
     }
 
     .portrait-box {
       position: relative;
-      width: 400px;
-      height: 400px;
+      width: 340px;
+      height: 340px;
       border: 4px solid var(--border);
       outline: 10px solid var(--outline);
       background: #000;
-      margin-bottom: -80px;
       overflow: hidden;
-      top: 70px;
+      margin-bottom: 0;
+      top: 0;
     }
 
     .portrait-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
     .overlay-text {
       position: absolute;
-      top: 290px;
-      left: 240px;
+      bottom: -20px;
+      left: 190px;
       padding: 12px 20px;
       color: var(--text);
-      font-size: 48px;
+      font-size: 44px;
       font-weight: 700;
       text-transform: lowercase;
       white-space: nowrap;
@@ -194,17 +194,129 @@
     }
 
     .banner-right {
+      min-width: 0;
       background: var(--yellow);
-      padding: 30px;
+      padding: 25px;
       position: relative;
-      z-index: 1;
     }
 
-    .banner-text p {
-      font-size: 16px;
-      line-height: 1.8;
+    .banner-text p,
+    .hero-description {
+      text-align: right;
+      direction: rtl;
+      line-height: 1.7;
+      font-family: 'Vazirmatn', 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      padding: 0;
+      margin: 0 0 18px;
       color: #1a1a1a;
-      font-weight: 500;
+    }
+
+    .hero-description>span {
+      font-size: 13px;
+    }
+
+    .hero-description {
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .resume-button {
+      display: block;
+      width: fit-content;
+      margin-right: 0;
+      margin-left: auto;
+      direction: rtl;
+      padding: 11px 24px;
+      background: #0f2543;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 14px;
+      transition: background 0.2s ease;
+    }
+
+    .resume-button:hover {
+      background: #1b416e;
+    }
+
+
+    /* ==================== TABLET ==================== */
+
+    @media (min-width: 769px) and (max-width: 992px) {
+      .hero-banner {
+        padding: 50px 0;
+      }
+
+      .banner-inner {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 25px;
+      }
+
+      .portrait-box {
+        width: 280px;
+        height: 280px;
+      }
+
+      .overlay-text {
+        font-size: 36px;
+        left: 145px;
+      }
+
+      .banner-right {
+        padding: 15px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+    }
+
+
+    /* ==================== MOBILE ==================== */
+
+    @media (max-width: 768px) {
+      .hero-banner {
+        padding: 30px 0;
+      }
+
+      .banner-inner {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 12px;
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      .portrait-box {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        outline-width: 5px;
+      }
+
+      .overlay-text {
+        font-size: clamp(18px, 5vw, 26px);
+        left: 45%;
+        bottom: -15px;
+        padding: 6px;
+      }
+
+      .banner-right {
+        padding: 8px;
+      }
+
+      .hero-description {
+        font-size: 12px;
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+
+      .resume-button {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
     }
 
     /* Design Section  */
@@ -704,55 +816,13 @@
       .container {
         width: 95%;
       }
-
-      .banner-inner {
-        gap: 30px;
-      }
-
-      .portrait-box {
-        width: 350px;
-        height: 350px;
-      }
-
-      .overlay-text {
-        left: 200px;
-        bottom: -70px;
-      }
     }
 
     @media (max-width: 992px) {
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 0.6fr 1.4fr;
         gap: 25px;
       }
-
-
-    }
-
-    /* تنظیمات بنر برای تبلت */
-    .hero-banner {
-      padding: 50px 0;
-    }
-
-    .banner-inner {
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-    }
-
-    .portrait-box {
-      width: 300px;
-      height: 300px;
-      margin-bottom: -60px;
-    }
-
-    .overlay-text {
-      font-size: 42px;
-      left: 180px;
-      bottom: -70px;
-    }
-
-    .banner-text p {
-      font-size: 15px;
     }
 
     /* بخش طراحی */
@@ -804,80 +874,11 @@
       .nav-icon.active span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
       }
-
-      .hero-banner {
-        padding: 0px 0;
-        display: flex;
-        align-items: center;
-        min-height: auto;
-      }
-
-      .banner-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        align-items: center;
-        transform: scale(0.75);
-        transform-origin: center;
-        width: 133%;
-        margin: 0 auto;
-        max-width: none;
-      }
-
-      .banner-right {
-        font-size: 0.35em;
-      }
-
-      .banner-text p {
-        font-size: 2.5em !important;
-        line-height: 1.1 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-
-      .banner-text br {
-        content: " ";
-        display: inline !important;
-      }
-
-      .banner-text br::after {
-        content: " ";
-        white-space: pre;
-      }
-
-      .portrait-box {
-        width: min(300px, 40vw);
-        height: min(300px, 40vw);
-        margin-bottom: min(-40px, -8vw);
-        position: relative;
-        top: 60px;
-      }
-
-      .overlay-text {
-        font-size: min(36px, 5vw);
-        left: min(180px, 25vw);
-        top: 210px;
-      }
-    }
-
-    /* مقیاس‌پذیری خودکار */
-    .portrait-box {
-      width: min(300px, 40vw);
-      height: min(300px, 40vw);
-      margin-bottom: min(-40px, -8vw);
-      position: relative;
-      top: 60px;
-    }
-
-    .overlay-text {
-      font-size: min(36px, 5vw);
-      left: min(180px, 25vw);
-      bottom: -70px;
     }
 
     /* بخش طراحی موبایل */
     .design-section {
-      padding: min(60px, 10vw) 0;
+      padding: 25px 0 60px;
       display: flex;
       align-items: center;
       min-height: auto;
@@ -1670,6 +1671,49 @@
       background: var(--yellow);
       opacity: 1;
     }
+
+    @media (max-width: 768px) {
+      #about {
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #about .hero-description {
+        color: #f5c542;
+        text-align: center;
+        font-size: 14px;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-section {
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-title {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #about .toggle-btn {
+        font-size: 16px;
+        padding: 12px 28px;
+      }
+    }
+
+    @media (min-width: 993px) {
+      .banner-right .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
   </style>
 </head>
 
@@ -1697,6 +1741,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero-banner">
     <div class="container banner-inner">
+
       <div class="banner-left">
         <div class="portrait-box">
           <img src="images/banner.jpg" alt="فاطمه محبی - توسعه‌دهنده فول‌استک">
@@ -1706,46 +1751,22 @@
 
       <div class="banner-right">
         <div class="banner-text">
-          <p style="
-          text-align: right;
-          direction: rtl;
-          line-height: 1.9;
-          font-family: 'Vazirmatn', 'Poppins', sans-serif;
-          font-size: 17px;
-          font-weight: 400;
-          padding: 10px 0;
-        ">
+          <p class="hero-description">
             <span style="font-weight: 700; color: #0f2543;">
               فاطمه محبی | توسعه‌دهنده فول‌استک (Python / Next.js)
             </span>
-            <br><br>
-            توسعه‌دهنده نرم‌افزار با تمرکز بر طراحی و پیاده‌سازی وب‌اپلیکیشن‌های مدرن، توسعه بک‌اند با Python و Django و
-            ساخت رابط‌های کاربری پویا با React و Next.js.
-            <br><br>
-            دارای تجربه عملی در توسعه وب‌سایت‌های شرکتی و فروشگاهی، طراحی API، کار با پایگاه‌های داده و پیاده‌سازی
-            نرم‌افزارهای دسکتاپ؛ با تأکید بر معماری اصولی، کدنویسی تمیز و راهکارهای متناسب با نیاز کسب‌وکارها.
+            <br>
+            توسعه‌دهنده وب‌اپلیکیشن‌های مدرن با استفاده از Python، Django، React و Next.js.
+            <br>
+            دارای تجربه عملی در توسعه وب‌سایت‌های شرکتی و فروشگاهی و طراحی API.
           </p>
 
-          <a href="assets/resume.pdf" download style="
-          display: inline-block;
-          margin-top: 20px;
-          background: #0f2543;
-          color: #f6c21b;
-          padding: 10px 28px;
-          border-radius: 6px;
-          font-weight: 700;
-          font-size: 14px;
-          text-decoration: none;
-          font-family: 'Vazirmatn', 'Poppins', sans-serif;
-          transition: all 0.3s ease;
-          border: 2px solid #0f2543;
-          float: right;
-        " onmouseover="this.style.background='#f6c21b'; this.style.color='#0f2543';"
-            onmouseout="this.style.background='#0f2543'; this.style.color='#f6c21b';">
-            <i class="fas fa-download"></i> دانلود رزومه
+          <a href="assets/resume.pdf" download class="resume-button">
+            دانلود رزومه
           </a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -1754,7 +1775,7 @@
     <div class="container design-inner animate-fadeInUp">
 
       <h6 class="design-title">درباره من</h6>
-      <p class="design-subtitle">
+      <p class="hero-description">
         Full-Stack Developer | Python, Django & Next.js
       </p>
 
