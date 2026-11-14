@@ -1584,6 +1584,7 @@
     @media (max-width: 768px) {
       .modal-body {
         grid-template-columns: 1fr;
+        padding: 20px;
       }
 
       .modal-content {
@@ -1592,10 +1593,6 @@
       }
 
       .modal-header {
-        padding: 20px;
-      }
-
-      .modal-body {
         padding: 20px;
       }
 
@@ -1673,12 +1670,6 @@
     }
 
     @media (max-width: 768px) {
-      #about {
-        padding-top: 0;
-      }
-    }
-
-    @media (max-width: 768px) {
       #about .hero-description {
         color: #f5c542;
         text-align: center;
@@ -1686,12 +1677,6 @@
         transform: none;
         margin-left: auto;
         margin-right: auto;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .gallery-section {
-        padding-top: 0;
       }
     }
 
@@ -1744,7 +1729,7 @@
 
       <div class="banner-left">
         <div class="portrait-box">
-          <img src="images/banner.jpg" alt="فاطمه محبی - توسعه‌دهنده فول‌استک">
+          <img src="images/banner.png" alt="فاطمه محبی - توسعه‌دهنده فول‌استک">
         </div>
         <div class="overlay-text">portfolio</div>
       </div>
@@ -1972,7 +1957,6 @@
       const navMenu = document.getElementById('navMenu');
       const toggleBtn = document.getElementById('toggleBtn');
       const bioText = document.getElementById('bioText');
-      const galleryItems = document.querySelectorAll('.gallery-item');
       const contactForm = document.querySelector('.contact-form');
 
       // ==================== داده‌های پروژه‌ها با گالری تصاویر ====================
@@ -2060,12 +2044,6 @@
 
 
       };
-
-      Object.keys(window.projectsData).forEach(key => {
-        if (window.projectsData[key].images?.length > 0) {
-          window.projectsData[key].image = window.projectsData[key].images[0];
-        }
-      });
 
       // ==================== Mobile Menu ====================
       if (navToggle && navMenu) {
